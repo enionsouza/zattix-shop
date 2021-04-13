@@ -26,7 +26,7 @@
 
           <ul>
             <li>
-              <a class="gotham-light" href="#">
+              <a id="current-page" class="gotham-light" href="#">
                 <i class="fa fa-home" aria-hidden="true"></i> Home</a
               >
             </li>
@@ -53,6 +53,7 @@
           </li>
         </ul>
       </nav>
+
       <div class="search-panel d-flex flex-column justify-content-around">
         <div class="zattix">
           <img
@@ -66,7 +67,7 @@
         <form
           class="input-group d-flex flex-column flex-md-row justify-content-center"
         >
-          <select title="category" class="category-select py-3">
+          <select title="category" class="category-select py-3 bg-white">
             <option selected value="all">All Departments</option>
             <option value="electronics">Electronics</option>
             <option value="real_estate">Real Estate</option>
@@ -91,10 +92,14 @@
             />
             <label for="country-region">Country/Region</label>
           </div>
-          <button type="submit" class="btn btn-dark ms-0 ms-md-3 rounded">
+          <a
+            type="button"
+            href="serch-results.html"
+            class="btn btn-dark ms-0 ms-md-3 rounded py-3"
+          >
             <i class="fa fa-search" aria-hidden="true"></i>
             <span class="d-md-none gotham-bold fs-5 ms-3">Search</span>
-          </button>
+          </a>
         </form>
       </div>
     </header>
@@ -448,6 +453,129 @@
         </div>
       </div>
     </main>
+
+    <footer class="bg-dark mt-5">
+      <div class="footer-zattix m-4">
+        <div class="zattix mb-2">
+          <img
+            class="zattix-logo"
+            src="./img/ZATTIX-logo.png"
+            alt="ZATTIX-logo"
+          />
+          <img class="zattix-name" src="./img/ZATTIX-name.png" alt="ZATTIX" />
+        </div>
+        <p class="color-white helvetica-medium">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corporis
+          sint, accusantium quam maxime voluptates provident veniam ea
+          recusandae ipsam laboriosam reiciendis facilis. Quas, dolorem?
+        </p>
+      </div>
+
+      <div class="footer-cat m-4">
+        <h3 class="color-pink foot-cat-1 pb-0">Categories</h3>
+        <ul class="foot-cat-2">
+          <li><a class="color-white" href="#">Real Estate</a></li>
+          <li><a class="color-white" href="#">Automotives</a></li>
+          <li><a class="color-white" href="#">Electornics</a></li>
+          <li><a class="color-white" href="#">Clothing</a></li>
+          <li><a class="color-white" href="#">Fashion</a></li>
+          <li><a class="color-white" href="#">Kids</a></li>
+          <li><a class="color-white" href="#">Food &amp; Drink</a></li>
+        </ul>
+        <ul class="foot-cat-3">
+          <li><a class="color-white" href="#">Real Estate</a></li>
+          <li><a class="color-white" href="#">Automotives</a></li>
+          <li><a class="color-white" href="#">Electornics</a></li>
+          <li><a class="color-white" href="#">Clothing</a></li>
+          <li><a class="color-white" href="#">Fashion</a></li>
+          <li><a class="color-white" href="#">Kids</a></li>
+          <li><a class="color-white" href="#">Food &amp; Drink</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav m-4">
+        <h3 class="color-pink foot-nav-1">Navigation</h3>
+        <ul>
+          <li><a class="color-white" class="current-page" href="#">Home</a></li>
+          <li><a class="color-white" href="#">Sign In</a></li>
+          <li><a class="color-white" href="#">Sign Up</a></li>
+          <li><a class="color-white" href="#">Terms &amp; Conditions</a></li>
+          <li><a class="color-white" href="#">FAQ</a></li>
+          <li><a class="color-white" href="#">Help</a></li>
+        </ul>
+      </div>
+
+      <form class="m-4" action="get">
+        <label
+          class="color-white label-id-country center-label"
+          for="id-country"
+          >Country</label
+        >
+        <select title="country" name="country" id="id-country">
+          <option selected value="brazil">Brazil</option>
+          <option value="argentina">Argentina</option>
+          <option value="colombia">Colombia</option>
+          <option value="mexico">Mexico</option>
+          <option value="peru">Peru</option>
+        </select>
+        <label
+          class="color-white label-id-language center-label"
+          for="id-language"
+          >Language</label
+        >
+        <select title="language" name="language" id="id-language">
+          <option selected value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="portuguese">Portuguese</option>
+        </select>
+        <label
+          class="color-white label-id-currency center-label"
+          for="id-currency"
+          >Currency</label
+        >
+        <select title="currency" name="currency" id="id-currency">
+          <option selected value="dollar">US Dollar</option>
+          <option value="euro">Euro</option>
+          <option value="real">Brazilian Real</option>
+          <option value="peso">Peso</option>
+        </select>
+      </form>
+
+      <div class="bottom-line">
+        <p class="color-white">
+          <a class="color-white" href="https://www.microverse.org/"
+            >Microverse</a
+          >
+          Capstone HTML&amp;CSS Module - Made with
+          <i class="fas fa-heart color-pink"></i> and emotion by
+          <a class="color-white" href="https://github.com/enionsouza"
+            >Ênio Neves de Souza</a
+          >
+        </p>
+
+        <ul>
+          <li>
+            <a class="color-white fs-2" href="https://github.com/enionsouza">
+              <i class="fab fa-github-square"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="color-white fs-2"
+              href="https://www.linkedin.com/in/enio-neves-de-souza/"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="color-white fs-2" href="https://twitter.com/enionsouza">
+              <i class="fab fa-twitter-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script
       src="https://kit.fontawesome.com/78d4ca6841.js"

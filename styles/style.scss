@@ -103,7 +103,7 @@ $helvetica-bold: "Helvetica Neue LT Bold", arial, helvetica, sans-serif;
 }
 
 .bg-dark {
-  background-color: $dark;
+  background-color: $dark !important;
 }
 
 body {
@@ -112,6 +112,15 @@ body {
 
 li {
   list-style: none;
+}
+
+#current-page {
+  color: $pink;
+
+  &:hover {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 h1,
@@ -340,6 +349,126 @@ main {
   }
 }
 
+footer {
+  display: grid;
+  grid-template:
+    "footer-zattix    footer-cat" auto
+    "footer-nav       form" auto
+    "bottom-line      bottom-line" auto
+    / 1fr 1fr;
+
+  ul {
+    padding: 0;
+  }
+
+  a:hover {
+    color: $pink;
+  }
+  .zattix {
+    grid-area: footer-zattix;
+
+    img {
+      height: 2em;
+    }
+
+    .zattix-logo {
+      transform: scale(0.8);
+    }
+
+    p {
+      text-align: justify !important;
+    }
+  }
+
+  .footer-cat {
+    grid-area: footer-cat;
+    display: grid;
+    grid-template:
+      "foot-cat-1 foot-cat-1" 2.5em
+      "foot-cat-2 foot-cat-3" auto
+      / 1fr 1fr;
+
+    .foot-cat-1 {
+      grid-area: foot-cat-1;
+      border-bottom: 1px solid $pink;
+    }
+
+    .foot-cat-2 {
+      grid-area: foot-cat-2;
+    }
+
+    .foot-cat-3 {
+      grid-area: foot-cat-3;
+    }
+  }
+
+  .footer-nav {
+    .foot-nav-1 {
+      border-bottom: 1px solid $pink;
+    }
+  }
+
+  form {
+    grid-area: form;
+    display: grid;
+    grid-template:
+      "label-id-country   id-country" 1.5em
+      "label-id-language  id-language" 1.5em
+      "label-id-currency  id-currency" 1.5em
+      / 1fr 1fr;
+
+    .label-id-country {
+      grid-area: label-id-country;
+    }
+
+    #id-country {
+      grid-area: id-country;
+    }
+
+    .label-id-language {
+      grid-area: label-id-language;
+    }
+
+    #id-language {
+      grid-area: id-language;
+    }
+
+    .label-id-currency {
+      grid-area: label-id-currency;
+    }
+
+    #id-currency {
+      grid-area: id-currency;
+    }
+
+    .center-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .bottom-line {
+    grid-area: bottom-line;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        display: inline-block;
+        margin: 0 1em;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-bar {
     * {
@@ -400,6 +529,21 @@ main {
 
     img {
       height: 2em;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    display: grid;
+    grid-template:
+      "footer-zattix    footer-cat    footer-nav    form" auto
+      "bottom-line      bottom-line   bottom-line   bottom-line" auto
+      / 1fr 1fr;
+
+    .bottom-line {
+      flex-direction: row;
+      justify-content: space-around;
     }
   }
 }
