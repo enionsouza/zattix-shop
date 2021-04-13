@@ -238,11 +238,9 @@ header > .search-panel {
 }
 
 section.hot-ads {
-  height: 50vh;
+  height: 45vh;
 
   .carousel-item {
-    // height: 40vh;
-
     .card {
       max-width: 540px;
 
@@ -266,6 +264,79 @@ section.hot-ads {
         background-image: url(../img/carousel-3.jpg);
       }
     }
+  }
+}
+
+main {
+  .main-card-img {
+    padding-top: 66.667%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-card-img-apt-1 {
+    background-image: url(../img/apartment-1.jpg);
+  }
+
+  .main-card-img-apt-2 {
+    background-image: url(../img/apartment-2.jpg);
+  }
+
+  .main-card-img-apt-3 {
+    background-image: url(../img/apartment-3.jpg);
+  }
+
+  .main-card-img-apt-4 {
+    background-image: url(../img/apartment-4.jpg);
+  }
+
+  .main-card-img-house-1 {
+    background-image: url(../img/house-1.jpg);
+  }
+
+  .main-card-img-house-2 {
+    background-image: url(../img/house-2.jpg);
+  }
+
+  .main-card-img-house-3 {
+    background-image: url(../img/house-3.jpg);
+  }
+
+  .main-card-img-house-4 {
+    background-image: url(../img/house-4.jpg);
+  }
+
+  .main-card-img-office-1 {
+    background-image: url(../img/office-1.jpg);
+  }
+
+  .main-card-img-office-2 {
+    background-image: url(../img/office-2.jpg);
+  }
+
+  .main-card-img-office-3 {
+    background-image: url(../img/office-3.jpg);
+  }
+
+  .main-card-img-office-4 {
+    background-image: url(../img/office-4.jpg);
+  }
+
+  .main-card-img-land-1 {
+    background-image: url(../img/land-1.jpg);
+  }
+
+  .main-card-img-land-2 {
+    background-image: url(../img/land-2.jpg);
+  }
+
+  .main-card-img-land-3 {
+    background-image: url(../img/land-3.jpg);
+  }
+
+  .main-card-img-land-4 {
+    background-image: url(../img/land-4.jpg);
   }
 }
 

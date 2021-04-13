@@ -80,7 +80,7 @@ header > .search-panel .zattix .zattix-logo { -webkit-transform: scale(0.8); tra
 
 header > .search-panel .btn-dark { background-color: #383838 !important; }
 
-section.hot-ads { height: 50vh; }
+section.hot-ads { height: 45vh; }
 
 section.hot-ads .carousel-item .card { max-width: 540px; }
 
@@ -91,6 +91,40 @@ section.hot-ads .carousel-item .card .card-img-1 { background-image: url(../img/
 section.hot-ads .carousel-item .card .card-img-2 { background-image: url(../img/carousel-2.jpg); }
 
 section.hot-ads .carousel-item .card .card-img-3 { background-image: url(../img/carousel-3.jpg); }
+
+main .main-card-img { padding-top: 66.667%; background-repeat: no-repeat; background-size: cover; background-position: center; }
+
+main .main-card-img-apt-1 { background-image: url(../img/apartment-1.jpg); }
+
+main .main-card-img-apt-2 { background-image: url(../img/apartment-2.jpg); }
+
+main .main-card-img-apt-3 { background-image: url(../img/apartment-3.jpg); }
+
+main .main-card-img-apt-4 { background-image: url(../img/apartment-4.jpg); }
+
+main .main-card-img-house-1 { background-image: url(../img/house-1.jpg); }
+
+main .main-card-img-house-2 { background-image: url(../img/house-2.jpg); }
+
+main .main-card-img-house-3 { background-image: url(../img/house-3.jpg); }
+
+main .main-card-img-house-4 { background-image: url(../img/house-4.jpg); }
+
+main .main-card-img-office-1 { background-image: url(../img/office-1.jpg); }
+
+main .main-card-img-office-2 { background-image: url(../img/office-2.jpg); }
+
+main .main-card-img-office-3 { background-image: url(../img/office-3.jpg); }
+
+main .main-card-img-office-4 { background-image: url(../img/office-4.jpg); }
+
+main .main-card-img-land-1 { background-image: url(../img/land-1.jpg); }
+
+main .main-card-img-land-2 { background-image: url(../img/land-2.jpg); }
+
+main .main-card-img-land-3 { background-image: url(../img/land-3.jpg); }
+
+main .main-card-img-land-4 { background-image: url(../img/land-4.jpg); }
 
 @media screen and (min-width: 768px) { .nav-bar * { margin: 0; padding: 0; }
   .nav-bar .nav-bar-left { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: static; }
