@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Gotham Bold"),
-    url("../fonts/Gotham/GothamRoundedBold_21016.ttf") format("ttf");
+    url("../fonts/Gotham/GothamRoundedBold_21016.ttf") format("truetype");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Gotham Rounded Light"),
-    url("../fonts/Gotham/GothamRoundedLight_21020.ttf") format("ttf");
+    url("../fonts/Gotham/GothamRoundedLight_21020.ttf") format("truetype");
 }
 
 @font-face {
@@ -41,11 +41,11 @@
 $pink: #d35266;
 $gray: #888;
 $dark: #383838;
-$gotham-light: "Gotham Rounded Light", Arial, Helvetica, sans-serif;
-$gotham-bold: "Gotham Bold", Arial, Helvetica, sans-serif;
-$helvetica-light: "Helvetica Neue LT Light", Arial, Helvetica, sans-serif;
-$helvetica-medium: "Helvetica Neue LT Medium", Arial, Helvetica, sans-serif;
-$helvetica-bold: "Helvetica Neue LT Bold", Arial, Helvetica, sans-serif;
+$gotham-light: "Gotham Rounded Light", arial, helvetica, sans-serif;
+$gotham-bold: "Gotham Bold", arial, helvetica, sans-serif;
+$helvetica-light: "Helvetica Neue LT Light", arial, helvetica, sans-serif;
+$helvetica-medium: "Helvetica Neue LT Medium", arial, helvetica, sans-serif;
+$helvetica-bold: "Helvetica Neue LT Bold", arial, helvetica, sans-serif;
 
 * {
   margin: 0;
@@ -54,13 +54,21 @@ $helvetica-bold: "Helvetica Neue LT Bold", Arial, Helvetica, sans-serif;
   font-family: $gotham-light;
 }
 
-.gotham-light {
-  font-family: $gotham-light;
-  color: red !important;
+body {
+  min-width: 350px;
 }
 
 li {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $helvetica-bold;
 }
 
 .nav-bar {
@@ -70,42 +78,57 @@ li {
   justify-content: space-between;
   align-items: center;
 
-  ul.nav-bar-left {
+  .nav-bar-left {
     display: flex;
     margin: 0.75em;
+    position: relative;
 
-    li {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: auto 0.25em;
+    ul {
+      display: none;
+      position: absolute;
+      top: 3em;
+      transform: translateY(0);
+      color: $pink !important;
+      background-color: $dark;
+      z-index: 5;
+      padding: 1em;
+      transition: 0.5s;
     }
 
     a {
+      display: inline-block;
       color: $gray;
+      font-family: $gotham-bold;
+      padding-bottom: 1em;
+      text-decoration: none;
 
       &:hover {
-        color: $pink;
-        text-decoration: none;
+        color: $pink !important;
+        text-decoration: none !important;
       }
     }
 
     button {
+      width: max-content;
       background-color: $pink;
       color: white;
       padding: 0.5em;
       font-family: $gotham-bold;
       border: none;
-      border-radius: 0.5em;
 
       &:hover {
         cursor: pointer;
+      }
+
+      &:focus + ul {
+        display: block;
+        transform: translateY(10px);
       }
     }
   }
 
   img {
-    height: 1em;
+    height: 2em;
   }
 
   ul.nav-bar-right {
@@ -113,11 +136,13 @@ li {
     justify-content: center;
     align-items: center;
     margin: auto 0.25em;
+
     li {
       padding-right: 1em;
 
       i {
         font-size: 1.5em;
+
         &:hover {
           cursor: pointer;
           color: $pink;
@@ -128,24 +153,121 @@ li {
 }
 
 header > .search-panel {
-  // background: url(../img/search-panel-background.jpg), rgb(211, 82, 102);
   background: url(../img/search-panel-background.jpg),
-    linear-gradient($pink, $pink 33%, white);
+    linear-gradient($pink 0% 33%, white);
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
   height: 400px;
 
+  h1 {
+    text-align: center;
+    color: white;
+  }
+
   .zattix {
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
       height: 3em;
     }
+
+    .zattix-logo {
+      transform: scale(0.8);
+    }
   }
 
-  btn-dark {
+  .btn-dark {
     background-color: $dark !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    background-color: $dark;
+    color: $gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-bar-left {
+      display: flex;
+      align-items: center;
+      margin: 0.75em;
+      position: static;
+
+      .button-logo {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        position: static;
+        top: 3em;
+        transform: translateY(0);
+        color: $pink !important;
+        background-color: $dark;
+        z-index: 5;
+        padding: 1em;
+        transition: 0.5s;
+      }
+
+      a {
+        display: inline-block;
+        color: $gray;
+        font-family: $gotham-bold;
+        padding-bottom: 1em;
+        text-decoration: none;
+
+        &:hover {
+          color: $pink !important;
+          text-decoration: none !important;
+        }
+      }
+
+      button {
+        width: max-content;
+        background-color: $pink;
+        color: white;
+        padding: 0.5em;
+        font-family: $gotham-bold;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:focus + ul {
+          display: block;
+          transform: translateY(10px);
+        }
+      }
+    }
+
+    img {
+      height: 2em;
+    }
+
+    ul.nav-bar-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 0.25em;
+
+      li {
+        padding-right: 1em;
+
+        i {
+          font-size: 1.5em;
+
+          &:hover {
+            cursor: pointer;
+            color: $pink;
+          }
+        }
+      }
+    }
   }
 }
