@@ -114,8 +114,8 @@ li {
   list-style: none;
 }
 
-#current-page {
-  color: $pink;
+.current-page {
+  color: $pink !important;
 
   &:hover {
     pointer-events: none;
@@ -247,7 +247,7 @@ header > .search-panel {
 }
 
 section.hot-ads {
-  height: 45vh;
+  height: 370px;
 
   .carousel-item {
     .card {
@@ -364,6 +364,7 @@ footer {
   a:hover {
     color: $pink;
   }
+
   .zattix {
     grid-area: footer-zattix;
 
@@ -416,6 +417,8 @@ footer {
       "label-id-language  id-language" 1.5em
       "label-id-currency  id-currency" 1.5em
       / 1fr 1fr;
+    gap: 1em;
+    padding-top: 2.5em;
 
     .label-id-country {
       grid-area: label-id-country;

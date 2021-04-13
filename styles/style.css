@@ -40,9 +40,9 @@ body { min-width: 350px; }
 
 li { list-style: none; }
 
-#current-page { color: #d35266; }
+.current-page { color: #d35266 !important; }
 
-#current-page:hover { pointer-events: none; cursor: default; }
+.current-page:hover { pointer-events: none; cursor: default; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Gotham Bold", arial, helvetica, sans-serif; }
 
@@ -84,7 +84,7 @@ header > .search-panel .zattix .zattix-logo { -webkit-transform: scale(0.8); tra
 
 header > .search-panel .btn-dark { background-color: #383838 !important; }
 
-section.hot-ads { height: 45vh; }
+section.hot-ads { height: 370px; }
 
 section.hot-ads .carousel-item .card { max-width: 540px; }
 
@@ -154,7 +154,7 @@ footer .footer-cat .foot-cat-3 { grid-area: foot-cat-3; }
 
 footer .footer-nav .foot-nav-1 { border-bottom: 1px solid #d35266; }
 
-footer form { grid-area: form; display: -ms-grid; display: grid; grid-template: "label-id-country   id-country" 1.5em "label-id-language  id-language" 1.5em "label-id-currency  id-currency" 1.5em / 1fr 1fr; }
+footer form { grid-area: form; display: -ms-grid; display: grid; grid-template: "label-id-country   id-country" 1.5em "label-id-language  id-language" 1.5em "label-id-currency  id-currency" 1.5em / 1fr 1fr; gap: 1em; padding-top: 2.5em; }
 
 footer form .label-id-country { grid-area: label-id-country; }
 
