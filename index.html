@@ -66,7 +66,7 @@
         <form
           class="input-group d-flex flex-column flex-md-row justify-content-center"
         >
-          <select title="category" class="category-select">
+          <select title="category" class="category-select py-3">
             <option selected value="all">All Departments</option>
             <option value="electronics">Electronics</option>
             <option value="real_estate">Real Estate</option>
@@ -93,10 +93,117 @@
           </div>
           <button type="submit" class="btn btn-dark ms-0 ms-md-3 rounded">
             <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="d-md-none gotham-bold fs-5 ms-3">Search</span>
           </button>
         </form>
       </div>
     </header>
+
+    <section class="hot-ads container bg-gray">
+      <h1 class="mt-5 ms-3 color-pink">HOT ADS!</h1>
+
+      <div id="hot-ads-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#hot-ads-carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hot-ads-carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hot-ads-carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card mx-auto mb-3 border-none">
+              <div class="row g-0">
+                <div class="col-6 card-img card-img-1"></div>
+                <div class="col-6">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Here, you'll find the best place to live!
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card mx-auto mb-3">
+              <div class="row g-0">
+                <div class="col-6 card-img card-img-2"></div>
+                <div class="col-6">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Don't waste your time! Come visit us today!
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ea natus mollitia quaerat eligendi porro quam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card mx-auto mb-3">
+              <div class="row g-0">
+                <div class="col-6 card-img card-img-3"></div>
+                <div class="col-6">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Finally, you'll find your home, sweet home!
+                      <a class="gotham-bold" href="#">#FindYourNextHome</a>
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sed, ipsam.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev bg-dark"
+          type="button"
+          data-bs-target="#hot-ads-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next bg-dark"
+          type="button"
+          data-bs-target="#hot-ads-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
 
     <main></main>
 

@@ -54,6 +54,58 @@ $helvetica-bold: "Helvetica Neue LT Bold", arial, helvetica, sans-serif;
   font-family: $gotham-light;
 }
 
+.gotham-light {
+  font-family: $gotham-light;
+}
+
+.gotham-bold {
+  font-family: $gotham-bold;
+}
+
+.helvetica-light {
+  font-family: $helvetica-light;
+}
+
+.helvetica-medium {
+  font-family: $helvetica-medium;
+}
+
+.helvetica-bold {
+  font-family: $helvetica-bold;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-pink {
+  color: $pink;
+}
+
+.color-gray {
+  color: $gray;
+}
+
+.color-dark {
+  color: $dark;
+}
+
+.bg-pink {
+  background-color: $pink;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-dark {
+  background-color: $dark;
+}
+
 body {
   min-width: 350px;
 }
@@ -68,7 +120,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $helvetica-bold;
+  font-family: $gotham-bold;
 }
 
 .nav-bar {
@@ -88,23 +140,24 @@ h6 {
       position: absolute;
       top: 3em;
       transform: translateY(0);
-      color: $pink !important;
       background-color: $dark;
       z-index: 5;
-      padding: 1em;
+      // padding: 1em;
       transition: 0.5s;
-    }
+      padding: 0;
 
-    a {
-      display: inline-block;
-      color: $gray;
-      font-family: $gotham-bold;
-      padding-bottom: 1em;
-      text-decoration: none;
+      a {
+        display: inline-block;
+        color: $gray;
+        padding: 1em;
+        padding-top: 0.5em;
+        font-family: $gotham-bold;
+        text-decoration: none;
 
-      &:hover {
-        color: $pink !important;
-        text-decoration: none !important;
+        &:hover {
+          color: $pink !important;
+          text-decoration: none !important;
+        }
       }
     }
 
@@ -184,18 +237,48 @@ header > .search-panel {
   }
 }
 
+section.hot-ads {
+  height: 50vh;
+
+  .carousel-item {
+    // height: 40vh;
+
+    .card {
+      max-width: 540px;
+
+      .card-img {
+        width: 50%;
+        padding-top: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .card-img-1 {
+        background-image: url(../img/carousel-1.jpg);
+      }
+
+      .card-img-2 {
+        background-image: url(../img/carousel-2.jpg);
+      }
+
+      .card-img-3 {
+        background-image: url(../img/carousel-3.jpg);
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-bar {
-    background-color: $dark;
-    color: $gray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
     .nav-bar-left {
       display: flex;
       align-items: center;
-      margin: 0.75em;
       position: static;
 
       .button-logo {
@@ -210,7 +293,6 @@ header > .search-panel {
         color: $pink !important;
         background-color: $dark;
         z-index: 5;
-        padding: 1em;
         transition: 0.5s;
       }
 
@@ -218,7 +300,6 @@ header > .search-panel {
         display: inline-block;
         color: $gray;
         font-family: $gotham-bold;
-        padding-bottom: 1em;
         text-decoration: none;
 
         &:hover {
@@ -248,26 +329,6 @@ header > .search-panel {
 
     img {
       height: 2em;
-    }
-
-    ul.nav-bar-right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto 0.25em;
-
-      li {
-        padding-right: 1em;
-
-        i {
-          font-size: 1.5em;
-
-          &:hover {
-            cursor: pointer;
-            color: $pink;
-          }
-        }
-      }
     }
   }
 }

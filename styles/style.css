@@ -10,21 +10,47 @@
 
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "Gotham Rounded Light", arial, helvetica, sans-serif; }
 
+.gotham-light { font-family: "Gotham Rounded Light", arial, helvetica, sans-serif; }
+
+.gotham-bold { font-family: "Gotham Bold", arial, helvetica, sans-serif; }
+
+.helvetica-light { font-family: "Helvetica Neue LT Light", arial, helvetica, sans-serif; }
+
+.helvetica-medium { font-family: "Helvetica Neue LT Medium", arial, helvetica, sans-serif; }
+
+.helvetica-bold { font-family: "Helvetica Neue LT Bold", arial, helvetica, sans-serif; }
+
+.color-white { color: white; }
+
+.color-black { color: black; }
+
+.color-pink { color: #d35266; }
+
+.color-gray { color: #888; }
+
+.color-dark { color: #383838; }
+
+.bg-pink { background-color: #d35266; }
+
+.bg-gray { background-color: #888; }
+
+.bg-dark { background-color: #383838; }
+
 body { min-width: 350px; }
 
 li { list-style: none; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue LT Bold", arial, helvetica, sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: "Gotham Bold", arial, helvetica, sans-serif; }
 
 .nav-bar { background-color: #383838; color: #888; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .nav-bar .nav-bar-left { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 0.75em; position: relative; }
 
-.nav-bar .nav-bar-left ul { display: none; position: absolute; top: 3em; -webkit-transform: translateY(0); transform: translateY(0); color: #d35266 !important; background-color: #383838; z-index: 5; padding: 1em; -webkit-transition: 0.5s; transition: 0.5s; }
+.nav-bar .nav-bar-left ul { display: none; position: absolute; top: 3em; -webkit-transform: translateY(0); transform: translateY(0); background-color: #383838; z-index: 5; -webkit-transition: 0.5s; transition: 0.5s; padding: 0; }
 
-.nav-bar .nav-bar-left a { display: inline-block; color: #888; font-family: "Gotham Bold", arial, helvetica, sans-serif; padding-bottom: 1em; text-decoration: none; }
+.nav-bar .nav-bar-left ul a { display: inline-block; color: #888; padding: 1em; padding-top: 0.5em; font-family: "Gotham Bold", arial, helvetica, sans-serif; text-decoration: none; }
 
-.nav-bar .nav-bar-left a:hover { color: #d35266 !important; text-decoration: none !important; }
+.nav-bar .nav-bar-left ul a:hover { color: #d35266 !important; text-decoration: none !important; }
 
 .nav-bar .nav-bar-left button { width: -webkit-max-content; width: -moz-max-content; width: max-content; background-color: #d35266; color: white; padding: 0.5em; font-family: "Gotham Bold", arial, helvetica, sans-serif; border: none; }
 
@@ -54,18 +80,26 @@ header > .search-panel .zattix .zattix-logo { -webkit-transform: scale(0.8); tra
 
 header > .search-panel .btn-dark { background-color: #383838 !important; }
 
-@media screen and (min-width: 768px) { .nav-bar { background-color: #383838; color: #888; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-  .nav-bar .nav-bar-left { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 0.75em; position: static; }
+section.hot-ads { height: 50vh; }
+
+section.hot-ads .carousel-item .card { max-width: 540px; }
+
+section.hot-ads .carousel-item .card .card-img { width: 50%; padding-top: 50%; background-repeat: no-repeat; background-size: cover; background-position: center; }
+
+section.hot-ads .carousel-item .card .card-img-1 { background-image: url(../img/carousel-1.jpg); }
+
+section.hot-ads .carousel-item .card .card-img-2 { background-image: url(../img/carousel-2.jpg); }
+
+section.hot-ads .carousel-item .card .card-img-3 { background-image: url(../img/carousel-3.jpg); }
+
+@media screen and (min-width: 768px) { .nav-bar * { margin: 0; padding: 0; }
+  .nav-bar .nav-bar-left { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: static; }
   .nav-bar .nav-bar-left .button-logo { display: none; }
-  .nav-bar .nav-bar-left ul { display: -webkit-box; display: -ms-flexbox; display: flex; position: static; top: 3em; -webkit-transform: translateY(0); transform: translateY(0); color: #d35266 !important; background-color: #383838; z-index: 5; padding: 1em; -webkit-transition: 0.5s; transition: 0.5s; }
-  .nav-bar .nav-bar-left a { display: inline-block; color: #888; font-family: "Gotham Bold", arial, helvetica, sans-serif; padding-bottom: 1em; text-decoration: none; }
+  .nav-bar .nav-bar-left ul { display: -webkit-box; display: -ms-flexbox; display: flex; position: static; top: 3em; -webkit-transform: translateY(0); transform: translateY(0); color: #d35266 !important; background-color: #383838; z-index: 5; -webkit-transition: 0.5s; transition: 0.5s; }
+  .nav-bar .nav-bar-left a { display: inline-block; color: #888; font-family: "Gotham Bold", arial, helvetica, sans-serif; text-decoration: none; }
   .nav-bar .nav-bar-left a:hover { color: #d35266 !important; text-decoration: none !important; }
   .nav-bar .nav-bar-left button { width: -webkit-max-content; width: -moz-max-content; width: max-content; background-color: #d35266; color: white; padding: 0.5em; font-family: "Gotham Bold", arial, helvetica, sans-serif; border: none; }
   .nav-bar .nav-bar-left button:hover { cursor: pointer; }
   .nav-bar .nav-bar-left button:focus + ul { display: block; -webkit-transform: translateY(10px); transform: translateY(10px); }
-  .nav-bar img { height: 2em; }
-  .nav-bar ul.nav-bar-right { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: auto 0.25em; }
-  .nav-bar ul.nav-bar-right li { padding-right: 1em; }
-  .nav-bar ul.nav-bar-right li i { font-size: 1.5em; }
-  .nav-bar ul.nav-bar-right li i:hover { cursor: pointer; color: #d35266; } }
+  .nav-bar img { height: 2em; } }
 /*# sourceMappingURL=style.css.map */
