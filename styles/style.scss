@@ -284,6 +284,10 @@ main {
     background-position: center;
   }
 
+  a:hover {
+    color: $pink;
+  }
+
   .main-card-img-apt-1 {
     background-image: url(../img/apartment-1.jpg);
   }

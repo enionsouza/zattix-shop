@@ -98,6 +98,8 @@ section.hot-ads .carousel-item .card .card-img-3 { background-image: url(../img/
 
 main .main-card-img { padding-top: 66.667%; background-repeat: no-repeat; background-size: cover; background-position: center; }
 
+main a:hover { color: #d35266; }
+
 main .main-card-img-apt-1 { background-image: url(../img/apartment-1.jpg); }
 
 main .main-card-img-apt-2 { background-image: url(../img/apartment-2.jpg); }
