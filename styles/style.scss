@@ -2,7 +2,8 @@
   font-family: "Gotham Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Gotham Bold"),
+  src:
+    local("Gotham Bold"),
     url("../fonts/Gotham/GothamRoundedBold_21016.ttf") format("truetype");
 }
 
@@ -10,7 +11,8 @@
   font-family: "Gotham Rounded Light";
   font-style: normal;
   font-weight: normal;
-  src: local("Gotham Rounded Light"),
+  src:
+    local("Gotham Rounded Light"),
     url("../fonts/Gotham/GothamRoundedLight_21020.ttf") format("truetype");
 }
 
@@ -18,7 +20,8 @@
   font-family: "Helvetica Neue LT Light";
   font-style: normal;
   font-weight: normal;
-  src: local("Helvetica Neue LT Light"),
+  src:
+    local("Helvetica Neue LT Light"),
     url("../fonts/Helvetica/Helvetica Neue LT 45 Light.woff") format("woff");
 }
 
@@ -26,7 +29,8 @@
   font-family: "Helvetica Neue LT Medium";
   font-style: normal;
   font-weight: normal;
-  src: local("Helvetica Neue LT Medium"),
+  src:
+    local("Helvetica Neue LT Medium"),
     url("../fonts/Helvetica/Helvetica Neue LT 65 Medium.woff") format("woff");
 }
 
@@ -34,7 +38,8 @@
   font-family: "Helvetica Neue LT Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Helvetica Neue LT Bold"),
+  src:
+    local("Helvetica Neue LT Bold"),
     url("../fonts/Helvetica/Helvetica Neue LT 75 Bold.woff") format("woff");
 }
 
@@ -134,6 +139,47 @@ h6 {
   font-family: $gotham-bold;
 }
 
+footer a:hover {
+  color: $pink;
+}
+
+main.home a:hover {
+  color: $pink;
+}
+
+footer ul {
+  padding: 0;
+}
+
+.nav-bar img {
+  height: 2em;
+}
+
+footer .zattix {
+  grid-area: footer-zattix;
+
+  img {
+    height: 2em;
+  }
+
+  .zattix-logo {
+    transform: scale(0.8);
+  }
+
+  p {
+    text-align: justify !important;
+  }
+}
+
+footer .bottom-line ul {
+  display: flex;
+
+  li {
+    display: inline-block;
+    margin: 0 1em;
+  }
+}
+
 .nav-bar {
   background-color: $dark;
   color: $gray;
@@ -153,7 +199,6 @@ h6 {
       transform: translateY(0);
       background-color: $dark;
       z-index: 5;
-      // padding: 1em;
       transition: 0.5s;
       padding: 0;
 
@@ -191,10 +236,6 @@ h6 {
     }
   }
 
-  img {
-    height: 2em;
-  }
-
   ul.nav-bar-right {
     display: flex;
     justify-content: center;
@@ -217,7 +258,8 @@ h6 {
 }
 
 header > .search-panel {
-  background: url(../img/search-panel-background.jpg),
+  background:
+    url(../img/search-panel-background.jpg),
     linear-gradient($pink 0% 33%, white);
   background-position: center;
   background-size: cover;
@@ -284,10 +326,6 @@ main.home {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  a:hover {
-    color: $pink;
   }
 
   .main-card-img-apt-1 {
@@ -402,30 +440,6 @@ footer {
     "bottom-line      bottom-line" auto
     / 1fr 1fr;
 
-  ul {
-    padding: 0;
-  }
-
-  a:hover {
-    color: $pink;
-  }
-
-  .zattix {
-    grid-area: footer-zattix;
-
-    img {
-      height: 2em;
-    }
-
-    .zattix-logo {
-      transform: scale(0.8);
-    }
-
-    p {
-      text-align: justify !important;
-    }
-  }
-
   .footer-cat {
     grid-area: footer-cat;
     display: grid;
@@ -504,15 +518,6 @@ footer {
 
     p {
       text-align: center;
-    }
-
-    ul {
-      display: flex;
-
-      li {
-        display: inline-block;
-        margin: 0 1em;
-      }
     }
   }
 }
