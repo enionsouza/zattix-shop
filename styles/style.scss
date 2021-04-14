@@ -116,6 +116,8 @@ li {
 
 .current-page {
   color: $pink !important;
+  cursor: default;
+  text-decoration: none;
 
   &:hover {
     pointer-events: none;
@@ -276,7 +278,7 @@ section.hot-ads {
   }
 }
 
-main {
+main.home {
   .main-card-img {
     padding-top: 66.667%;
     background-repeat: no-repeat;
@@ -350,6 +352,45 @@ main {
 
   .main-card-img-land-4 {
     background-image: url(../img/land-4.jpg);
+  }
+}
+
+aside.search-results {
+  .form-check-input:checked {
+    @extend .bg-pink;
+  }
+}
+
+.main-search-results {
+  .search-result-card-img {
+    padding-top: 65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .search-result-card-img-1 {
+    background-image: url(../img/flat-1.jpg);
+  }
+
+  .search-result-card-img-2 {
+    background-image: url(../img/flat-2.jpg);
+  }
+
+  .search-result-card-img-3 {
+    background-image: url(../img/flat-3.jpg);
+  }
+
+  .search-result-card-img-4 {
+    background-image: url(../img/flat-4.jpg);
+  }
+
+  .search-result-card-img-5 {
+    background-image: url(../img/flat-5.jpg);
+  }
+
+  .page-link {
+    @extend .helvetica-medium;
   }
 }
 
@@ -541,6 +582,12 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+  .main-search-results {
+    .search-result-card-img {
+      padding-top: 25%;
+    }
+  }
+
   footer {
     display: grid;
     grid-template:

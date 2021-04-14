@@ -26,9 +26,15 @@
 
           <ul>
             <li>
-              <a class="gotham-light" href="./index.html">
-                <i class="fa fa-home" aria-hidden="true"></i> Home</a
+              <a
+                class="gotham-light"
+                href="./index.html"
+                data-bs-toggle="tooltip"
+                title="Click here to return to Home Page"
               >
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Home
+              </a>
             </li>
             <li>
               <a href="#">
@@ -67,19 +73,24 @@
         <form
           class="input-group d-flex flex-column flex-md-row justify-content-center"
         >
-          <select title="category" class="category-select py-3 bg-white">
-            <option selected value="all">All Departments</option>
+          <select
+            title="category"
+            id="id-category"
+            class="category-select py-3 bg-white"
+          >
+            <option value="all">All Departments</option>
             <option value="electronics">Electronics</option>
-            <option value="real_estate">Real Estate</option>
+            <option value="real_estate" selected>Real Estate</option>
             <option value="automotive">Automotive</option>
             <option value="arts">Art Crafts</option>
           </select>
           <div class="form-floating">
             <input
-              type="email"
+              type="text"
               class="form-control"
               id="floatingInput"
               placeholder="What do you search for?"
+              value="flat"
             />
             <label for="floatingInput">What do you search for?</label>
           </div>
@@ -89,12 +100,12 @@
               class="form-control"
               id="country-region"
               placeholder="Country/Region"
+              value="San Francisco"
             />
             <label for="country-region">Country/Region</label>
           </div>
           <a
-            type="button"
-            href="search-results.html"
+            href="./search-results.html"
             class="btn btn-dark ms-0 ms-md-3 rounded py-3"
           >
             <i class="fa fa-search" aria-hidden="true"></i>
@@ -104,7 +115,595 @@
       </div>
     </header>
 
-    <main></main>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <aside class="col-12 col-md-3 col-lg-2 search-results">
+          <form action="get">
+            <fieldset class="fieldset-rent-ownership my-5">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-rent"
+                  value="rent"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-rent"
+                >
+                  Rent
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-ownership"
+                  value="ownership"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-ownership"
+                >
+                  Ownership
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset-type my-5">
+              <legend class="helvetica-medium border-bottom fs-6">Type</legend>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-entire-place"
+                  value="entire_place"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-entire-place"
+                >
+                  Entire Place
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-private-room"
+                  value="private_room"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-private-room"
+                >
+                  Private Room
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-shared-room"
+                  value="shared_room"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-shared-room"
+                >
+                  Shared Room
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset-size my-5">
+              <legend class="helvetica-medium border-bottom fs-6">Size</legend>
+              <div class="form-check">
+                <input
+                  class="form-check-input p-2"
+                  type="checkbox"
+                  id="id-rooms-2-4"
+                  value="rooms_2_4"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-rooms-2-4"
+                >
+                  2-4 Rooms
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input p-2"
+                  type="checkbox"
+                  id="id-rooms-5"
+                  value="rooms-5"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-rooms-5"
+                >
+                  5+ Rooms
+                </label>
+              </div>
+              <div class="row mx-auto">
+                <div class="form-check col-6 d-flex align-items-center">
+                  <input
+                    class="form-check-input p-2"
+                    type="checkbox"
+                    id="id-rooms-custom"
+                    value="rooms-custom"
+                  />
+                  <label
+                    class="form-check-label helvetica-light ms-2 mt-1 text-nowrap small"
+                    for="id-rooms-custom"
+                  >
+                    Custom
+                  </label>
+                </div>
+                <div class="col-6">
+                  <input
+                    type="number"
+                    class="form-control form-control-sm ms-3 text-nowrap small"
+                    min="1"
+                    placeholder="QTY..."
+                    aria-label="qty"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset-price my-5">
+              <legend class="helvetica-medium border-bottom fs-6">
+                Price Range
+              </legend>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-price-range-1"
+                  value="price-range-1"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-price-range-1"
+                >
+                  $100 ~ $1,000
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-price-range-2"
+                  value="price-range-2"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-price-range-2"
+                >
+                  $1,000 ~ $100,000
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-price-range-3"
+                  value="price-range-3"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-price-range-3"
+                >
+                  $100,000 ~ $1,000,000
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="id-price-range-4"
+                  value="price-range-4"
+                />
+                <label
+                  class="form-check-label helvetica-light text-nowrap small"
+                  for="id-price-range-4"
+                >
+                  $1,000,000+
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </aside>
+
+        <main class="col-12 col-md-9 col-lg-10 main-search-results">
+          <section>
+            <div class="card mx-auto p-3 mb-3">
+              <div class="row g-0">
+                <div
+                  class="col-lg-6 search-result-card-img search-result-card-img-1 position-relative"
+                >
+                  <div
+                    class="btn-group btn-group-sm position-absolute bottom-0 end-0"
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 position-relative">
+                  <div class="card-body">
+                    <h5 class="card-title fs-6 small me-5">
+                      Flat with big living, 2 bedrooms, 2 bathrooms and a
+                      kitchen
+                    </h5>
+                    <p class="card-text color-pink gotham-bold">200M, rent</p>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text">
+                      <span class="gotham-bold">Location:</span> 21 Start St,
+                      San Francisco - USA
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <p class="card-text mb-0">
+                        <small class="text-muted">April 14, 2021</small>
+                      </p>
+                      <p class="bg-pink color-white helvetica-bold rounded p-1">
+                        $420
+                      </p>
+                    </div>
+                    <div class="position-absolute top-0 end-0 m-1">
+                      <div class="btn-group dropstart">
+                        <button
+                          type="button"
+                          class="btn bg-pink color-white helvetica-bold rounded py-1 px-2 lh-1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          +
+                        </button>
+                        <ul class="dropdown-menu p-1">
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >See more like this...</a
+                            >
+                          </li>
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >Contact our staff</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mx-auto p-3 mb-3">
+              <div class="row g-0">
+                <div
+                  class="col-lg-6 search-result-card-img search-result-card-img-2 position-relative"
+                >
+                  <div
+                    class="btn-group btn-group-sm position-absolute bottom-0 end-0"
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 position-relative">
+                  <div class="card-body">
+                    <h5 class="card-title fs-6 small me-5">
+                      Flat with big living, 2 bedrooms, 2 bathrooms and a
+                      kitchen
+                    </h5>
+                    <p class="card-text color-pink gotham-bold">200M, rent</p>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text">
+                      <span class="gotham-bold">Location:</span> 21 Start St,
+                      San Francisco - USA
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <p class="card-text mb-0">
+                        <small class="text-muted">April 14, 2021</small>
+                      </p>
+                      <p class="bg-pink color-white helvetica-bold rounded p-1">
+                        $420
+                      </p>
+                    </div>
+                    <div class="position-absolute top-0 end-0 m-1">
+                      <div class="btn-group dropstart">
+                        <button
+                          type="button"
+                          class="btn bg-pink color-white helvetica-bold rounded py-1 px-2 lh-1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          +
+                        </button>
+                        <ul class="dropdown-menu p-1">
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >See more like this...</a
+                            >
+                          </li>
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >Contact our staff</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mx-auto p-3 mb-3">
+              <div class="row g-0">
+                <div
+                  class="col-lg-6 search-result-card-img search-result-card-img-3 position-relative"
+                >
+                  <div
+                    class="btn-group btn-group-sm position-absolute bottom-0 end-0"
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 position-relative">
+                  <div class="card-body">
+                    <h5 class="card-title fs-6 small me-5">
+                      Flat with big living, 2 bedrooms, 2 bathrooms and a
+                      kitchen
+                    </h5>
+                    <p class="card-text color-pink gotham-bold">200M, rent</p>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text">
+                      <span class="gotham-bold">Location:</span> 21 Start St,
+                      San Francisco - USA
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <p class="card-text mb-0">
+                        <small class="text-muted">April 14, 2021</small>
+                      </p>
+                      <p class="bg-pink color-white helvetica-bold rounded p-1">
+                        $420
+                      </p>
+                    </div>
+                    <div class="position-absolute top-0 end-0 m-1">
+                      <div class="btn-group dropstart">
+                        <button
+                          type="button"
+                          class="btn bg-pink color-white helvetica-bold rounded py-1 px-2 lh-1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          +
+                        </button>
+                        <ul class="dropdown-menu p-1">
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >See more like this...</a
+                            >
+                          </li>
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >Contact our staff</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mx-auto p-3 mb-3">
+              <div class="row g-0">
+                <div
+                  class="col-lg-6 search-result-card-img search-result-card-img-4 position-relative"
+                >
+                  <div
+                    class="btn-group btn-group-sm position-absolute bottom-0 end-0"
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 position-relative">
+                  <div class="card-body">
+                    <h5 class="card-title fs-6 small me-5">
+                      Flat with big living, 2 bedrooms, 2 bathrooms and a
+                      kitchen
+                    </h5>
+                    <p class="card-text color-pink gotham-bold">200M, rent</p>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text">
+                      <span class="gotham-bold">Location:</span> 21 Start St,
+                      San Francisco - USA
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <p class="card-text mb-0">
+                        <small class="text-muted">April 14, 2021</small>
+                      </p>
+                      <p class="bg-pink color-white helvetica-bold rounded p-1">
+                        $420
+                      </p>
+                    </div>
+                    <div class="position-absolute top-0 end-0 m-1">
+                      <div class="btn-group dropstart">
+                        <button
+                          type="button"
+                          class="btn bg-pink color-white helvetica-bold rounded py-1 px-2 lh-1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          +
+                        </button>
+                        <ul class="dropdown-menu p-1">
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >See more like this...</a
+                            >
+                          </li>
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >Contact our staff</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mx-auto p-3 mb-3">
+              <div class="row g-0">
+                <div
+                  class="col-lg-6 search-result-card-img search-result-card-img-5 position-relative"
+                >
+                  <div
+                    class="btn-group btn-group-sm position-absolute bottom-0 end-0"
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn bg-pink color-white">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 position-relative">
+                  <div class="card-body">
+                    <h5 class="card-title fs-6 small me-5">
+                      Flat with big living, 2 bedrooms, 2 bathrooms and a
+                      kitchen
+                    </h5>
+                    <p class="card-text color-pink gotham-bold">200M, rent</p>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text">
+                      <span class="gotham-bold">Location:</span> 21 Start St,
+                      San Francisco - USA
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <p class="card-text mb-0">
+                        <small class="text-muted">April 14, 2021</small>
+                      </p>
+                      <p class="bg-pink color-white helvetica-bold rounded p-1">
+                        $420
+                      </p>
+                    </div>
+                    <div class="position-absolute top-0 end-0 m-1">
+                      <div class="btn-group dropstart">
+                        <button
+                          type="button"
+                          class="btn bg-pink color-white helvetica-bold rounded py-1 px-2 lh-1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          +
+                        </button>
+                        <ul class="dropdown-menu p-1">
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >See more like this...</a
+                            >
+                          </li>
+                          <li>
+                            <a class="color-black helvetica-bold" href="#"
+                              >Contact our staff</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                  >Previous</a
+                >
+              </li>
+              <li class="page-item">
+                <span class="page-link bg-pink color-white">1</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link color-pink" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link color-pink" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link color-pink" href="#" tabindex="+1">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </main>
+      </div>
+    </div>
 
     <footer class="bg-dark mt-5">
       <div class="footer-zattix m-4">
@@ -148,7 +747,16 @@
       <div class="footer-nav m-4">
         <h3 class="color-pink foot-nav-1">Navigation</h3>
         <ul>
-          <li><a class="color-white" href="./index.html">Home</a></li>
+          <li>
+            <a
+              class="color-white"
+              href="./index.html"
+              data-bs-toggle="tooltip"
+              title="Click here to return to Home Page"
+            >
+              Home
+            </a>
+          </li>
           <li><a class="color-white" href="#">Sign In</a></li>
           <li><a class="color-white" href="#">Sign Up</a></li>
           <li><a class="color-white" href="#">Terms &amp; Conditions</a></li>
