@@ -2,8 +2,7 @@
   font-family: "Gotham Bold";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Gotham Bold"),
+  src: local("Gotham Bold"),
     url("../fonts/Gotham/GothamRoundedBold_21016.ttf") format("truetype");
 }
 
@@ -11,8 +10,7 @@
   font-family: "Gotham Rounded Light";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Gotham Rounded Light"),
+  src: local("Gotham Rounded Light"),
     url("../fonts/Gotham/GothamRoundedLight_21020.ttf") format("truetype");
 }
 
@@ -20,8 +18,7 @@
   font-family: "Helvetica Neue LT Light";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Helvetica Neue LT Light"),
+  src: local("Helvetica Neue LT Light"),
     url("../fonts/Helvetica/Helvetica Neue LT 45 Light.woff") format("woff");
 }
 
@@ -29,8 +26,7 @@
   font-family: "Helvetica Neue LT Medium";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Helvetica Neue LT Medium"),
+  src: local("Helvetica Neue LT Medium"),
     url("../fonts/Helvetica/Helvetica Neue LT 65 Medium.woff") format("woff");
 }
 
@@ -38,8 +34,7 @@
   font-family: "Helvetica Neue LT Bold";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Helvetica Neue LT Bold"),
+  src: local("Helvetica Neue LT Bold"),
     url("../fonts/Helvetica/Helvetica Neue LT 75 Bold.woff") format("woff");
 }
 
@@ -258,8 +253,7 @@ footer .bottom-line ul {
 }
 
 header > .search-panel {
-  background:
-    url(../img/search-panel-background.jpg),
+  background: url(../img/search-panel-background.jpg),
     linear-gradient($pink 0% 33%, white);
   background-position: center;
   background-size: cover;
@@ -435,10 +429,13 @@ aside.search-results {
 footer {
   display: grid;
   grid-template:
-    "footer-zattix    footer-cat" auto
-    "footer-nav       form" auto
-    "bottom-line      bottom-line" auto
-    / 1fr 1fr;
+    "footer-zattix" auto
+    "footer-cat" auto
+    "footer-nav" auto
+    "form" auto
+    "bottom-line" auto
+    "bottom-line" auto
+    / 1fr;
 
   .footer-cat {
     grid-area: footer-cat;
@@ -463,6 +460,8 @@ footer {
   }
 
   .footer-nav {
+    grid-area: footer-nav;
+
     .foot-nav-1 {
       border-bottom: 1px solid $pink;
     }
@@ -477,7 +476,7 @@ footer {
       "label-id-currency  id-currency" 1.5em
       / 1fr 1fr;
     gap: 1em;
-    padding-top: 2.5em;
+    padding: 2.5em 20%;
 
     .label-id-country {
       grid-area: label-id-country;
@@ -584,6 +583,14 @@ footer {
       height: 2em;
     }
   }
+
+  footer {
+    grid-template:
+      "footer-zattix    footer-cat" auto
+      "footer-nav       form" auto
+      "bottom-line      bottom-line" auto
+      / 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -599,6 +606,10 @@ footer {
       "footer-zattix    footer-cat    footer-nav    form" auto
       "bottom-line      bottom-line   bottom-line   bottom-line" auto
       / 1fr 1fr;
+
+    form {
+      padding: 2.5em 5%;
+    }
 
     .bottom-line {
       flex-direction: row;
