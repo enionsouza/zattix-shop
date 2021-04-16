@@ -54,7 +54,9 @@
         </ul>
       </nav>
 
-      <div class="search-panel d-flex flex-column justify-content-around">
+      <div
+        class="search-panel d-none d-md-flex flex-column justify-content-around"
+      >
         <div class="zattix">
           <img
             class="zattix-logo"
@@ -106,8 +108,8 @@
       </div>
     </header>
 
-    <h2 class="mt-5 fs-1 ms-5 ps-5 color-pink">HOT ADS!</h2>
-    <section class="hot-ads container bg-gray pt-5">
+    <h2 class="mt-5 d-none d-md-block fs-1 ms-5 ps-5 color-pink">HOT ADS!</h2>
+    <section class="hot-ads container-full d-none d-md-block pt-5">
       <div id="hot-ads-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-indicators">
           <button
@@ -131,6 +133,7 @@
             aria-label="Slide 3"
           ></button>
         </div>
+
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="card mx-auto mb-3 border-none">
@@ -138,13 +141,35 @@
                 <div class="col-6 card-img card-img-1"></div>
                 <div class="col-6">
                   <div class="card-body">
-                    <h5 class="card-title">
+                    <h5 class="card-title mt-3 mb-5">
                       Here, you'll find the best place to live!
                     </h5>
                     <p class="card-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Fugiat, maxime!
                     </p>
+                    <p class="card-text my-2">
+                      <span class="gotham-bold">Location:</span> 21 Start St,
+                      San Francisco - USA
+                    </p>
+                    <div
+                      class="btn-group mt-5"
+                      role="group"
+                      aria-label="Basic example"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold"
+                      >
+                        $ 1,500,000
+                      </button>
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold text-nowrap"
+                      >
+                        <i class="fas fa-shopping-cart"></i> Purchase details
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -157,13 +182,35 @@
                 <div class="col-6 card-img card-img-2"></div>
                 <div class="col-6">
                   <div class="card-body">
-                    <h5 class="card-title">
+                    <h5 class="card-title mt-3 mb-5">
                       Don't waste your time! Come visit us today!
                     </h5>
                     <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Ea natus mollitia quaerat eligendi porro quam!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
                     </p>
+                    <p class="card-text my-2">
+                      <span class="gotham-bold">Location:</span> 56 Second St,
+                      New York - USA
+                    </p>
+                    <div
+                      class="btn-group mt-5"
+                      role="group"
+                      aria-label="Basic example"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold"
+                      >
+                        $ 1,500,000
+                      </button>
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold text-nowrap"
+                      >
+                        <i class="fas fa-shopping-cart"></i> Purchase details
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -176,22 +223,45 @@
                 <div class="col-6 card-img card-img-3"></div>
                 <div class="col-6">
                   <div class="card-body">
-                    <h5 class="card-title">
+                    <h5 class="card-title mt-3 mb-5">
                       Finally, you'll find your home, sweet home!
                       <a class="gotham-bold" href="#">#FindYourNextHome</a>
                     </h5>
                     <p class="card-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Sed, ipsam.
+                      Fugiat, maxime!
                     </p>
+                    <p class="card-text my-2">
+                      <span class="gotham-bold">Location:</span> 72 Middle St,
+                      Miami - USA
+                    </p>
+                    <div
+                      class="btn-group mt-5"
+                      role="group"
+                      aria-label="Basic example"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold"
+                      >
+                        $ 1,500,000
+                      </button>
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold text-nowrap"
+                      >
+                        <i class="fas fa-shopping-cart"></i> Purchase details
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <button
-          class="carousel-control-prev"
+          class="carousel-control-prev small"
           type="button"
           data-bs-target="#hot-ads-carousel"
           data-bs-slide="prev"
@@ -212,7 +282,7 @@
     </section>
 
     <main class="home">
-      <h1 class="mt-5 fs-1 ms-5 ps-5 color-pink">LATEST OFFERS!</h1>
+      <h2 class="mt-5 fs-1 ms-5 ps-5 color-pink">LATEST OFFERS!</h2>
       <div class="container">
         <h2 class="mt-5 fs-3 color-dark">Apartments</h2>
         <div class="row">
@@ -842,9 +912,9 @@
       </div>
     </main>
 
-    <footer class="bg-dark mt-5">
-      <div class="footer-zattix m-4">
-        <div class="zattix mb-2">
+    <footer class="mt-5">
+      <div class="footer-zattix m-3">
+        <div class="zattix btn bg-pink text-nowrap mb-2">
           <img
             class="zattix-logo"
             src="./img/ZATTIX-logo.png"
@@ -852,50 +922,50 @@
           />
           <img class="zattix-name" src="./img/ZATTIX-name.png" alt="ZATTIX" />
         </div>
-        <p class="color-white helvetica-medium">
+        <p class="helvetica-medium">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corporis
           sint, accusantium quam maxime voluptates provident veniam ea
           recusandae ipsam laboriosam reiciendis facilis. Quas, dolorem?
         </p>
       </div>
 
-      <div class="footer-cat m-4">
+      <div class="footer-cat m-3">
         <h3 class="color-pink foot-cat-1 pb-0">Categories</h3>
         <ul class="foot-cat-2">
-          <li><a class="color-white" href="#">Real Estate</a></li>
-          <li><a class="color-white" href="#">Automotives</a></li>
-          <li><a class="color-white" href="#">Electornics</a></li>
-          <li><a class="color-white" href="#">Clothing</a></li>
-          <li><a class="color-white" href="#">Fashion</a></li>
-          <li><a class="color-white" href="#">Kids</a></li>
-          <li><a class="color-white" href="#">Food &amp; Drink</a></li>
+          <li><a class="color-black" href="#">Real Estate</a></li>
+          <li><a class="color-black" href="#">Automotives</a></li>
+          <li><a class="color-black" href="#">Electornics</a></li>
+          <li><a class="color-black" href="#">Clothing</a></li>
+          <li><a class="color-black" href="#">Fashion</a></li>
+          <li><a class="color-black" href="#">Kids</a></li>
+          <li><a class="color-black" href="#">Food &amp; Drink</a></li>
         </ul>
         <ul class="foot-cat-3">
-          <li><a class="color-white" href="#">Real Estate</a></li>
-          <li><a class="color-white" href="#">Automotives</a></li>
-          <li><a class="color-white" href="#">Electornics</a></li>
-          <li><a class="color-white" href="#">Clothing</a></li>
-          <li><a class="color-white" href="#">Fashion</a></li>
-          <li><a class="color-white" href="#">Kids</a></li>
-          <li><a class="color-white" href="#">Food &amp; Drink</a></li>
+          <li><a class="color-black" href="#">Real Estate</a></li>
+          <li><a class="color-black" href="#">Automotives</a></li>
+          <li><a class="color-black" href="#">Electornics</a></li>
+          <li><a class="color-black" href="#">Clothing</a></li>
+          <li><a class="color-black" href="#">Fashion</a></li>
+          <li><a class="color-black" href="#">Kids</a></li>
+          <li><a class="color-black" href="#">Food &amp; Drink</a></li>
         </ul>
       </div>
 
-      <div class="footer-nav m-4">
+      <div class="footer-nav m-3">
         <h3 class="color-pink foot-nav-1">Navigation</h3>
         <ul>
-          <li><a class="color-white current-page" href="#">Home</a></li>
-          <li><a class="color-white" href="#">Sign In</a></li>
-          <li><a class="color-white" href="#">Sign Up</a></li>
-          <li><a class="color-white" href="#">Terms &amp; Conditions</a></li>
-          <li><a class="color-white" href="#">FAQ</a></li>
-          <li><a class="color-white" href="#">Help</a></li>
+          <li><a class="color-black current-page" href="#">Home</a></li>
+          <li><a class="color-black" href="#">Sign In</a></li>
+          <li><a class="color-black" href="#">Sign Up</a></li>
+          <li><a class="color-black" href="#">Terms &amp; Conditions</a></li>
+          <li><a class="color-black" href="#">FAQ</a></li>
+          <li><a class="color-black" href="#">Help</a></li>
         </ul>
       </div>
 
-      <form class="m-4" action="get">
+      <form class="m-3" action="get">
         <label
-          class="color-white label-id-country center-label"
+          class="color-black label-id-country center-label"
           for="id-country"
           >Country</label
         >
@@ -907,7 +977,7 @@
           <option value="peru">Peru</option>
         </select>
         <label
-          class="color-white label-id-language center-label"
+          class="color-black label-id-language center-label"
           for="id-language"
           >Language</label
         >
@@ -918,7 +988,7 @@
           <option value="portuguese">Portuguese</option>
         </select>
         <label
-          class="color-white label-id-currency center-label"
+          class="color-black label-id-currency center-label"
           for="id-currency"
           >Currency</label
         >
@@ -931,32 +1001,32 @@
       </form>
 
       <div class="bottom-line">
-        <p class="color-white">
-          <a class="color-white" href="https://www.microverse.org/"
+        <p class="color-black">
+          <a class="color-black" href="https://www.microverse.org/"
             >Microverse</a
           >'s Capstone HTML&amp;CSS Module - Made with
           <i class="fas fa-heart color-pink"></i> and emotion by
-          <a class="color-white" href="https://github.com/enionsouza"
+          <a class="color-black" href="https://github.com/enionsouza"
             >Ênio Neves de Souza</a
           >
         </p>
 
         <ul>
           <li>
-            <a class="color-white fs-2" href="https://github.com/enionsouza">
+            <a class="color-black fs-2" href="https://github.com/enionsouza">
               <i class="fab fa-github-square"></i>
             </a>
           </li>
           <li>
             <a
-              class="color-white fs-2"
+              class="color-black fs-2"
               href="https://www.linkedin.com/in/enio-neves-de-souza/"
             >
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
           <li>
-            <a class="color-white fs-2" href="https://twitter.com/enionsouza">
+            <a class="color-black fs-2" href="https://twitter.com/enionsouza">
               <i class="fab fa-twitter-square"></i>
             </a>
           </li>

@@ -2,8 +2,7 @@
   font-family: "Gotham Bold";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Gotham Bold"),
+  src: local("Gotham Bold"),
     url("../fonts/Gotham/GothamRoundedBold_21016.ttf") format("truetype");
 }
 
@@ -11,8 +10,7 @@
   font-family: "Gotham Rounded Light";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Gotham Rounded Light"),
+  src: local("Gotham Rounded Light"),
     url("../fonts/Gotham/GothamRoundedLight_21020.ttf") format("truetype");
 }
 
@@ -20,8 +18,7 @@
   font-family: "Helvetica Neue LT Light";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Helvetica Neue LT Light"),
+  src: local("Helvetica Neue LT Light"),
     url("../fonts/Helvetica/Helvetica Neue LT 45 Light.woff") format("woff");
 }
 
@@ -29,8 +26,7 @@
   font-family: "Helvetica Neue LT Medium";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Helvetica Neue LT Medium"),
+  src: local("Helvetica Neue LT Medium"),
     url("../fonts/Helvetica/Helvetica Neue LT 65 Medium.woff") format("woff");
 }
 
@@ -38,8 +34,7 @@
   font-family: "Helvetica Neue LT Bold";
   font-style: normal;
   font-weight: normal;
-  src:
-    local("Helvetica Neue LT Bold"),
+  src: local("Helvetica Neue LT Bold"),
     url("../fonts/Helvetica/Helvetica Neue LT 75 Bold.woff") format("woff");
 }
 
@@ -258,8 +253,7 @@ footer .bottom-line ul {
 }
 
 header > .search-panel {
-  background:
-    url(../img/search-panel-background.jpg),
+  background: url(../img/search-panel-background.jpg),
     linear-gradient($pink 0% 33%, white);
   background-position: center;
   background-size: cover;
@@ -291,11 +285,11 @@ header > .search-panel {
 }
 
 section.hot-ads {
-  height: 370px;
+  height: 420px;
 
   .carousel-item {
     .card {
-      max-width: 540px;
+      max-width: 700px;
 
       .card-img {
         width: 50%;
@@ -317,6 +311,14 @@ section.hot-ads {
         background-image: url(../img/carousel-3.jpg);
       }
     }
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d35266'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  }
+
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d35266'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   }
 }
 
@@ -435,17 +437,25 @@ aside.search-results {
 footer {
   display: grid;
   grid-template:
-    "footer-zattix" auto
-    "footer-cat" auto
-    "footer-nav" auto
-    "form" auto
-    "bottom-line" auto
-    "bottom-line" auto
-    / 1fr;
+    "footer-zattix    form" auto
+    "bottom-line      bottom-line" auto
+    / 1fr 1fr;
+
+  .footer-zattix {
+    grid-area: footer-zattix;
+
+    .zattix {
+      cursor: default;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
 
   .footer-cat {
     grid-area: footer-cat;
-    display: grid;
+    display: none;
     grid-template:
       "foot-cat-1 foot-cat-1" 2.5em
       "foot-cat-2 foot-cat-3" auto
@@ -466,6 +476,7 @@ footer {
   }
 
   .footer-nav {
+    display: none;
     grid-area: footer-nav;
 
     .foot-nav-1 {
@@ -474,15 +485,16 @@ footer {
   }
 
   form {
-    grid-area: form;
     display: grid;
+    grid-area: form;
     grid-template:
       "label-id-country   id-country" 1.5em
       "label-id-language  id-language" 1.5em
       "label-id-currency  id-currency" 1.5em
       / 1fr 1fr;
     gap: 1em;
-    padding: 2.5em 20%;
+    justify-self: center;
+    align-self: center;
 
     .label-id-country {
       grid-area: label-id-country;
@@ -523,6 +535,11 @@ footer {
 
     p {
       text-align: center;
+      margin: 0 1em 0.5em 1em;
+    }
+
+    ul {
+      margin-bottom: 0.5em;
     }
   }
 }
@@ -592,10 +609,22 @@ footer {
 
   footer {
     grid-template:
-      "footer-zattix    footer-cat" auto
-      "footer-nav       form" auto
+      "footer-zattix    footer-nav" auto
+      "footer-cat       form" auto
       "bottom-line      bottom-line" auto
-      / 1fr 1fr;
+      / 1fr 0.8fr;
+
+    .footer-nav {
+      display: block;
+    }
+
+    .footer-cat {
+      display: grid;
+    }
+
+    form {
+      display: grid;
+    }
   }
 }
 
