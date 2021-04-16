@@ -112,7 +112,7 @@ $helvetica-bold: "Helvetica Neue LT Bold", arial, helvetica, sans-serif;
 }
 
 body {
-  min-width: 350px;
+  min-width: 150px;
 }
 
 li {
@@ -444,9 +444,10 @@ aside.search-results {
 footer {
   display: grid;
   grid-template:
-    "footer-zattix    form" auto
-    "bottom-line      bottom-line" auto
-    / 1fr 1fr;
+    "footer-zattix" auto
+    "form"          auto
+    "bottom-line"   auto
+    / 1fr;
 
   .footer-zattix {
     grid-area: footer-zattix;

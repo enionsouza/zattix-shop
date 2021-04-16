@@ -36,7 +36,7 @@
 
 .bg-dark { background-color: #383838 !important; }
 
-body { min-width: 350px; }
+body { min-width: 150px; }
 
 li { list-style: none; }
 
@@ -164,7 +164,7 @@ main.home .main-card-img-land-4 { background-image: url(../img/land-4.jpg); }
 
 .main-search-results .search-result-card-img-5 { background-image: url(../img/flat-5.jpg); }
 
-footer { display: -ms-grid; display: grid; grid-template: "footer-zattix    form" auto "bottom-line      bottom-line" auto / 1fr 1fr; }
+footer { display: -ms-grid; display: grid; grid-template: "footer-zattix" auto "form"          auto "bottom-line"   auto / 1fr; }
 
 footer .footer-zattix { grid-area: footer-zattix; }
 
