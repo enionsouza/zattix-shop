@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>ZATTIX - Buy and Sell!</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="nav-bar-left">
+          <button class="button-logo">
+            <img src="./img/ZATTIX-logo.png" alt="ZATTIX logo" />
+          </button>
+
+          <ul>
+            <li>
+              <a class="gotham-light current-page" href="#">
+                <i class="fa fa-home" aria-hidden="true"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-book" aria-hidden="true"></i> Collections</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i> Purchase list</a
+              >
+            </li>
+            <li><button>Start Seling Now!</button></li>
+          </ul>
+        </div>
+
+        <ul class="nav-bar-right">
+          <li>
+            <i class="fas fa-envelope"></i>
+          </li>
+          <li>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="search-panel d-flex flex-column justify-content-around"
+      >
+        <div class="zattix">
+          <img
+            class="zattix-logo"
+            src="./img/ZATTIX-logo.png"
+            alt="ZATTIX-logo"
+          />
+          <img class="zattix-name" src="./img/ZATTIX-name.png" alt="ZATTIX" />
+        </div>
+        <h1>Buying and Selling couldn't be Simpler than this!</h1>
+        <form
+          class="input-group d-flex flex-column flex-md-row justify-content-center"
+        >
+          <select title="category" class="category-select py-3 bg-white">
+            <option selected value="all">All Departments</option>
+            <option value="electronics">Electronics</option>
+            <option value="real_estate">Real Estate</option>
+            <option value="automotive">Automotive</option>
+            <option value="arts">Art Crafts</option>
+          </select>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="What do you search for?"
+            />
+            <label for="floatingInput">What do you search for?</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="country-region"
+              placeholder="Country/Region"
+            />
+            <label for="country-region">Country/Region</label>
+          </div>
+          <a
+            href="./search-results.html"
+            class="btn btn-dark ms-0 ms-md-3 rounded py-3"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Click here to go to Search Results Page"
+          >
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="d-md-none gotham-bold fs-5 ms-3">Search</span>
+          </a>
+        </form>
+      </div>
+    </header>
+
+    <h2 class="mt-5 d-none d-md-block fs-1 ms-5 ps-5 color-pink">HOT ADS!</h2>
+    <section class="hot-ads container-full d-none d-md-block pt-5">
+      <div id="hot-ads-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#hot-ads-carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hot-ads-carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hot-ads-carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card mx-auto mb-3 border-none">
+              <div class="row g-0">
+                <div class="col-6 card-img card-img-1"></div>
+                <div class="col-6">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-5">
+                      Here, you'll find the best place to live!
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text my-2">
+                      <span class="gotham-bold">Location:</span> 21 Start St,
+                      San Francisco - USA
+                    </p>
+                    <div
+                      class="btn-group mt-5"
+                      role="group"
+                      aria-label="Basic example"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold"
+                      >
+                        $ 1,500,000
+                      </button>
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold text-nowrap"
+                      >
+                        <i class="fas fa-shopping-cart"></i> Purchase details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card mx-auto mb-3">
+              <div class="row g-0">
+                <div class="col-6 card-img card-img-2"></div>
+                <div class="col-6">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-5">
+                      Don't waste your time! Come visit us today!
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text my-2">
+                      <span class="gotham-bold">Location:</span> 56 Second St,
+                      New York - USA
+                    </p>
+                    <div
+                      class="btn-group mt-5"
+                      role="group"
+                      aria-label="Basic example"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold"
+                      >
+                        $ 1,500,000
+                      </button>
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold text-nowrap"
+                      >
+                        <i class="fas fa-shopping-cart"></i> Purchase details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card mx-auto mb-3">
+              <div class="row g-0">
+                <div class="col-6 card-img card-img-3"></div>
+                <div class="col-6">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-5">
+                      Finally, you'll find your home, sweet home!
+                      <a class="gotham-bold" href="#">#FindYourNextHome</a>
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, maxime!
+                    </p>
+                    <p class="card-text my-2">
+                      <span class="gotham-bold">Location:</span> 72 Middle St,
+                      Miami - USA
+                    </p>
+                    <div
+                      class="btn-group mt-5"
+                      role="group"
+                      aria-label="Basic example"
+                    >
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold"
+                      >
+                        $ 1,500,000
+                      </button>
+                      <button
+                        type="button"
+                        class="btn bg-pink color-white gotham-bold text-nowrap"
+                      >
+                        <i class="fas fa-shopping-cart"></i> Purchase details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev small"
+          type="button"
+          data-bs-target="#hot-ads-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#hot-ads-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <main class="home">
+      <h2 class="mt-5 fs-1 ms-5 ps-5 color-pink">LATEST OFFERS!</h2>
+      <div class="container">
+        <h2 class="mt-5 fs-3 color-dark">Apartments</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-apt-1"></div>
+              <div class="card-body">
+                <h5 class="card-title">In the heart of Downtown</h5>
+                <p class="card-text">
+                  Charming and quiet place in the middle of city. Come visit us
+                  today.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$460,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-apt-2"></div>
+              <div class="card-body">
+                <h5 class="card-title">Live integrated to the city!</h5>
+                <p class="card-text">
+                  Live close to Lincoln Fields... Just a few blocks away from
+                  Downtown!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$420,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-apt-3"></div>
+              <div class="card-body">
+                <h5 class="card-title">In the heart of Downtown</h5>
+                <p class="card-text">
+                  Charming and quiet place in the middle of city. Come visit us
+                  today.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$840,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-apt-4"></div>
+              <div class="card-body">
+                <h5 class="card-title">Live integrated to the city!</h5>
+                <p class="card-text">
+                  Live close to Lincoln Fields... Just a few blocks away from
+                  Downtown!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$580,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="mt-5 fs-3 color-dark">Houses</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-house-1"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Special cozy place for you and your family
+                </h5>
+                <p class="card-text">
+                  Close to a all the infrastructure and facilities you'll need!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$850,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-house-2"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Sunshine Light Park Resort</h5>
+                <p class="card-text">
+                  Excellent neighborhood with fantastic perks! Come visit us
+                  today!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$1,050,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-house-3"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Special cozy place for you and your family
+                </h5>
+                <p class="card-text">
+                  Close to a all the infrastructure and facilities you'll need!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$925,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-house-4"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Sunshine Light Park Resort</h5>
+                <p class="card-text">
+                  Excellent neighborhood with fantastic perks! Come visit us
+                  today!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$1,160,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="mt-5 fs-3 color-dark">Offices</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-office-1"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Plenty of space for your business</h5>
+                <p class="card-text">
+                  Warehouse with excellent location: in the middle of the
+                  Industrial Borough.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$1,460,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-office-2"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Central America Empire Building</h5>
+                <p class="card-text">
+                  The best place for your business to grow is in the heart of
+                  Downtown!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$1,520,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-office-3"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Plenty of space for your business</h5>
+                <p class="card-text">
+                  Warehouse with excellent location: in the middle of the
+                  Industrial Borough.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$1,280,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div
+                class="car-img-top main-card-img main-card-img-office-4"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Central America Empire Building</h5>
+                <p class="card-text">
+                  The best place for your business to grow is in the heart of
+                  Downtown!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$1,675,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="mt-5 fs-3 color-dark">Land</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-land-1"></div>
+              <div class="card-body">
+                <h5 class="card-title">Just one hour away from the city</h5>
+                <p class="card-text">
+                  Come live on a farm and grow your own healthy organic food!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$2,220,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-land-2"></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Living close to the nature is priceless!
+                </h5>
+                <p class="card-text">
+                  Provide your family a better quality of life: visit us today!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$3,510,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-land-3"></div>
+              <div class="card-body">
+                <h5 class="card-title">Just one hour away from the city</h5>
+                <p class="card-text">
+                  Come live on a farm and grow your own healthy organic food!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$2,880,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card">
+              <div class="car-img-top main-card-img main-card-img-land-4"></div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Living close to the nature is priceless!
+                </h5>
+                <p class="card-text">
+                  Provide your family a better quality of life: visit us today!
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group dropup">
+                    <button
+                      type="button"
+                      class="btn bg-pink color-white helvetica-bold rounded"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      +
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >See more like this...</a
+                        >
+                      </li>
+                      <li>
+                        <a class="color-black helvetica-bold" href="#"
+                          >Contact our staff</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="helvetica-bold">$2,970,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-5">
+      <div class="footer-zattix m-3">
+        <div class="zattix btn bg-pink text-nowrap mb-2">
+          <img
+            class="zattix-logo"
+            src="./img/ZATTIX-logo.png"
+            alt="ZATTIX-logo"
+          />
+          <img class="zattix-name" src="./img/ZATTIX-name.png" alt="ZATTIX" />
+        </div>
+        <p class="helvetica-medium">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi corporis
+          sint, accusantium quam maxime voluptates provident veniam ea
+          recusandae ipsam laboriosam reiciendis facilis. Quas, dolorem?
+        </p>
+      </div>
+
+      <div class="footer-cat m-3">
+        <h3 class="color-pink foot-cat-1 pb-0">Categories</h3>
+        <ul class="foot-cat-2">
+          <li><a class="color-black" href="#">Real Estate</a></li>
+          <li><a class="color-black" href="#">Automotives</a></li>
+          <li><a class="color-black" href="#">Electornics</a></li>
+          <li><a class="color-black" href="#">Clothing</a></li>
+          <li><a class="color-black" href="#">Fashion</a></li>
+          <li><a class="color-black" href="#">Kids</a></li>
+          <li><a class="color-black" href="#">Food &amp; Drink</a></li>
+        </ul>
+        <ul class="foot-cat-3">
+          <li><a class="color-black" href="#">Real Estate</a></li>
+          <li><a class="color-black" href="#">Automotives</a></li>
+          <li><a class="color-black" href="#">Electornics</a></li>
+          <li><a class="color-black" href="#">Clothing</a></li>
+          <li><a class="color-black" href="#">Fashion</a></li>
+          <li><a class="color-black" href="#">Kids</a></li>
+          <li><a class="color-black" href="#">Food &amp; Drink</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav m-3">
+        <h3 class="color-pink foot-nav-1">Navigation</h3>
+        <ul>
+          <li><a class="color-black current-page" href="#">Home</a></li>
+          <li><a class="color-black" href="#">Sign In</a></li>
+          <li><a class="color-black" href="#">Sign Up</a></li>
+          <li><a class="color-black" href="#">Terms &amp; Conditions</a></li>
+          <li><a class="color-black" href="#">FAQ</a></li>
+          <li><a class="color-black" href="#">Help</a></li>
+        </ul>
+      </div>
+
+      <form class="m-3" action="get">
+        <label
+          class="color-black label-id-country center-label"
+          for="id-country"
+          >Country</label
+        >
+        <select title="country" name="country" id="id-country">
+          <option selected value="brazil">Brazil</option>
+          <option value="argentina">Argentina</option>
+          <option value="colombia">Colombia</option>
+          <option value="mexico">Mexico</option>
+          <option value="peru">Peru</option>
+        </select>
+        <label
+          class="color-black label-id-language center-label"
+          for="id-language"
+          >Language</label
+        >
+        <select title="language" name="language" id="id-language">
+          <option selected value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="portuguese">Portuguese</option>
+        </select>
+        <label
+          class="color-black label-id-currency center-label"
+          for="id-currency"
+          >Currency</label
+        >
+        <select title="currency" name="currency" id="id-currency">
+          <option selected value="dollar">US Dollar</option>
+          <option value="euro">Euro</option>
+          <option value="real">Brazilian Real</option>
+          <option value="peso">Peso</option>
+        </select>
+      </form>
+
+      <div class="bottom-line">
+        <p class="color-black">
+          <a class="color-black" href="https://www.microverse.org/"
+            >Microverse</a
+          >'s Capstone HTML&amp;CSS Module - Made with
+          <i class="fas fa-heart color-pink"></i> and emotion by
+          <a class="color-black" href="https://github.com/enionsouza"
+            >Ênio Neves de Souza</a
+          >
+        </p>
+
+        <ul>
+          <li>
+            <a class="color-black fs-2" href="https://github.com/enionsouza">
+              <i class="fab fa-github-square"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="color-black fs-2"
+              href="https://www.linkedin.com/in/enio-neves-de-souza/"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="color-black fs-2" href="https://twitter.com/enionsouza">
+              <i class="fab fa-twitter-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/78d4ca6841.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
